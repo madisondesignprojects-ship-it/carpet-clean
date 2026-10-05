@@ -21,3 +21,5 @@
   .coupon-side{grid-template-columns:1fr 170px;gap:12px;padding:12px}
   .coupon-side-copy h2{font-size:1.35rem}
 }
+
+.hero-note{margin-top:14px;color:var(--muted);font-size:.9rem;font-weight:700;letter-spacing:.01em}

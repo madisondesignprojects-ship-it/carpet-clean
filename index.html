@@ -197,6 +197,16 @@
       .row{grid-template-columns:1fr}form{padding:24px}.form-foot{align-items:stretch;flex-direction:column}.form-foot .btn{width:100%}
       .footer-inner{align-items:flex-start;flex-direction:column}
     }
+  
+    .coupon-section{padding:78px 0;background:var(--paper);border-bottom:1px solid var(--line)}
+    .coupon-card{display:grid;grid-template-columns:.72fr 1.28fr;gap:34px;align-items:center;background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 14px 38px rgba(23,40,43,.07)}
+    .coupon-copy .kicker{margin-bottom:8px}
+    .coupon-copy h2{font-size:clamp(2rem,4vw,3.25rem);margin:8px 0 12px}
+    .coupon-copy p{color:var(--muted);margin:0;max-width:430px}
+    .coupon-image-wrap{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;overflow:hidden}
+    .coupon-image{width:100%;height:auto;border-radius:12px}
+    .coupon-empty{color:var(--muted);font-size:.9rem;padding:30px;text-align:center}
+
   </style>
 </head>
 <body>
@@ -262,6 +272,22 @@
     </section>
 
     <div class="band"><div class="wrap band-inner"><div><strong>Have a room, rug, sofa, or stubborn spot in mind?</strong><br><span>Give Preferred Carpet Cleaning a call and describe the job.</span></div><a class="btn" href="tel:+16088391565">(608) 839-1565</a></div></div>
+
+
+    <section class="coupon-section" id="coupon">
+      <div class="wrap">
+        <div class="coupon-card fade">
+          <div class="coupon-copy">
+            <span class="kicker">Current offer</span>
+            <h2>Save on your next cleaning.</h2>
+            <p>Check the current Preferred Carpet Cleaning coupon before you call. This offer is updated from our current promotions.</p>
+          </div>
+          <div class="coupon-image-wrap">
+            <div id="couponContent" class="coupon-empty">Loading current coupon…</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section" id="services">
       <div class="wrap">
@@ -351,6 +377,27 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    async function loadCurrentCoupon(){
+      const target = document.getElementById('couponContent');
+      try{
+        const response = await fetch('https://klbpbcybomnhqfojdgtz.supabase.co/rest/v1/current_coupons?service_key=eq.carpet&select=image_path&limit=1',{
+          headers:{'apikey':'sb_publishable_' + 'tlEfc8T0cm2cMdG1dN89nA_TMhWcRTs'}
+        });
+        if(!response.ok) throw new Error('coupon request failed');
+        const rows = await response.json();
+        const path = rows?.[0]?.image_path;
+        if(!path) throw new Error('no coupon');
+        const publicPath = path.split('/').map(encodeURIComponent).join('/');
+        target.className = '';
+        target.innerHTML = '<img class="coupon-image" src="https://klbpbcybomnhqfojdgtz.supabase.co/storage/v1/object/public/coupons/' + publicPath + '" alt="Current Preferred Carpet Cleaning coupon">';
+      }catch(error){
+        target.className = 'coupon-empty';
+        target.textContent = 'Current coupon unavailable right now.';
+      }
+    }
+    loadCurrentCoupon();
+
     function toggleMenu(button){
       const nav = document.getElementById('siteNav');
       const open = nav.classList.toggle('open');

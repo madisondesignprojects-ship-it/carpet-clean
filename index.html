@@ -3,436 +3,583 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Preferred Carpet Cleaning in Cottage Grove, Wisconsin. Carpet and upholstery cleaning. Call (608) 839-1565." />
-  <meta name="theme-color" content="#17282b" />
-  <title>Preferred Carpet Cleaning | Cottage Grove, WI</title>
+  <meta name="description" content="Madison Design Projects builds thoughtful, affordable websites for local businesses. $400 flat, with a 3–5 day turnaround." />
+  <meta name="theme-color" content="#18352e" />
+  <title>Madison Design Projects — Websites for Local Businesses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --ink:#17282b;
-      --ink-soft:#324347;
-      --cream:#f8f3ea;
-      --paper:#fffdf9;
-      --sand:#e9ddca;
-      --terracotta:#c65f3a;
-      --terracotta-dark:#a84829;
-      --sage:#7b8977;
-      --line:#d8cec0;
-      --muted:#687477;
-      --white:#ffffff;
-      --shadow:0 24px 70px rgba(23,40,43,.12);
-      --radius:24px;
-      --radius-sm:14px;
-      --max:1180px;
+      --ink:#24312d;
+      --green:#24453b;
+      --green-2:#26483e;
+      --paper:#f2ece0;
+      --cream:#fcfaf5;
+      --line:#d8cebd;
+      --muted:#6d7772;
+      --rust:#b36b46;
+      --gold:#c8a15a;
+      --blue:#7e9696;
+      --shadow:0 20px 60px rgba(35,49,45,.11);
+      --radius:22px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
-    body::selection{background:var(--terracotta);color:#fff}
-    a{text-decoration:none;color:inherit}
-    button,input,textarea,select{font:inherit}
-    img{display:block;max-width:100%}
-    .wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
-
-    .utility{background:var(--ink);color:#f9f3e9;font-size:.82rem}
-    .utility-inner{min-height:40px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .utility-left{display:flex;gap:12px;align-items:center}
-    .utility-dot{width:6px;height:6px;border-radius:999px;background:var(--terracotta)}
-    .utility a{font-weight:800;color:#fff}
-
-    .nav{position:sticky;top:0;z-index:50;background:rgba(248,243,234,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(216,206,192,.75)}
-    .nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:12px;min-width:0}
-    .brand-mark{width:47px;height:47px;flex:0 0 47px;display:grid;place-items:center;background:var(--terracotta);border-radius:15px;box-shadow:0 9px 20px rgba(198,95,58,.22)}
-    .brand-mark svg{width:29px;height:29px}
-    .brand-copy{min-width:0}
-    .brand-name{display:block;font-family:Georgia,"Times New Roman",serif;font-size:1.04rem;letter-spacing:-.01em;white-space:nowrap}
-    .brand-loc{display:block;color:var(--muted);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;margin-top:2px}
-    .nav-links{display:flex;align-items:center;gap:28px;font-size:.9rem;font-weight:800}
-    .nav-links a:not(.nav-call){color:#48585b}
-    .nav-links a:not(.nav-call):hover{color:var(--terracotta)}
-    .nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--terracotta);color:#fff;padding:11px 16px;border-radius:10px;box-shadow:0 7px 18px rgba(198,95,58,.18)}
-    .menu{display:none;border:1px solid var(--line);background:transparent;color:var(--ink);width:44px;height:44px;border-radius:11px;font-size:1.25rem}
-
-    .hero{position:relative;overflow:hidden;background:var(--paper);border-bottom:1px solid var(--line)}
-    .hero::before{content:"";position:absolute;inset:auto -130px -190px auto;width:440px;height:440px;border-radius:50%;background:rgba(233,221,202,.55);filter:blur(2px)}
-    .hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(23,40,43,.025) 1px,transparent 1px);background-size:48px 100%}
-    .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.03fr .97fr;gap:78px;align-items:center;padding:82px 0 90px}
-    .kicker{display:inline-flex;align-items:center;gap:9px;font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;font-weight:900;color:var(--terracotta)}
-    .kicker::before{content:"";width:24px;height:2px;background:currentColor;border-radius:999px}
-    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.08;letter-spacing:-.04em}
-    h1{font-size:clamp(3.4rem,6.7vw,6.6rem);margin:15px 0 24px;max-width:760px}
-    .hero-copy p{font-size:1.14rem;max-width:665px;color:#536165;margin:0}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 20px;border-radius:11px;font-size:.94rem;font-weight:900;transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{background:var(--ink);color:#fff;box-shadow:0 10px 24px rgba(23,40,43,.14)}
-    .btn-secondary{background:transparent;border:1px solid var(--ink);color:var(--ink)}
-    .hero-facts{display:flex;gap:24px;flex-wrap:wrap;margin-top:30px}
-    .fact strong{display:block;font-size:.95rem}
-    .fact span{display:block;color:var(--muted);font-size:.79rem}
-
-    .hero-art{position:relative;min-height:540px;display:grid;place-items:center}
-    .art-card{position:relative;width:min(100%,530px);aspect-ratio:1/1.02;border-radius:34px;background:var(--ink);overflow:hidden;box-shadow:var(--shadow);padding:28px}
-    .art-card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 18%,rgba(198,95,58,.45),transparent 30%),radial-gradient(circle at 15% 84%,rgba(123,137,119,.35),transparent 33%)}
-    .art-top{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;color:#f8f1e7}
-    .art-label{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#d8d2c8}
-    .art-year{font-family:Georgia,serif;font-size:.9rem;color:#e7bcab}
-    .art-scene{position:absolute;inset:84px 26px 24px;border-radius:24px;overflow:hidden;background:#d4c5af}
-    .carpet{position:absolute;left:-10%;right:-10%;bottom:-8%;height:58%;background-color:#8a7b64;background-image:radial-gradient(circle at 16% 20%,rgba(255,255,255,.12) 0 2px,transparent 3px),radial-gradient(circle at 60% 38%,rgba(0,0,0,.12) 0 1px,transparent 2px),radial-gradient(circle at 82% 72%,rgba(255,255,255,.09) 0 2px,transparent 3px);background-size:26px 24px,19px 21px,31px 28px;transform:skewY(-4deg)}
-    .floor-line{position:absolute;left:0;right:0;bottom:34%;height:2px;background:rgba(23,40,43,.12)}
-    .vessel{position:absolute;left:12%;top:21%;width:76%;height:48%;background:#f6efe4;border-radius:28px;box-shadow:0 12px 30px rgba(23,40,43,.18)}
-    .vessel::before{content:"";position:absolute;left:16%;right:16%;top:17%;height:17%;background:#d6c5ad;border-radius:999px;opacity:.9}
-    .vessel::after{content:"";position:absolute;left:11%;right:11%;bottom:16%;height:2px;background:#d2c5b6}
-    .wand{position:absolute;width:53%;height:14%;left:29%;bottom:21%;border:14px solid var(--terracotta);border-left-width:19px;border-top-color:transparent;border-right-color:transparent;border-bottom-color:transparent;border-radius:50%;transform:rotate(-12deg)}
-    .wand-handle{position:absolute;width:18%;height:12px;background:var(--terracotta);left:67%;top:31%;border-radius:999px;transform:rotate(-10deg)}
-    .clean-glow{position:absolute;width:28%;height:18%;left:50%;bottom:14%;border-radius:50%;background:rgba(255,255,255,.24);filter:blur(11px)}
-    .art-sticker{position:absolute;right:22px;bottom:22px;background:var(--cream);color:var(--ink);padding:10px 12px;border-radius:10px;font-size:.68rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
-    .art-sticker strong{display:block;font-family:Georgia,serif;font-size:.9rem;letter-spacing:0;text-transform:none;margin-bottom:2px}
-
-    .band{background:var(--terracotta);color:#fff}
-    .band-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:18px 0}
-    .band strong{font-family:Georgia,serif;font-size:1.08rem}
-    .band span{font-size:.88rem;color:#f8ddd2}
-    .band .btn{background:#fff;color:var(--ink);padding:11px 15px}
-
-    .section{padding:104px 0}
-    .section-head{display:grid;grid-template-columns:.78fr 1.22fr;gap:70px;align-items:end;margin-bottom:42px}
-    h2{font-size:clamp(2.45rem,4.5vw,4.35rem);margin:11px 0 0}
-    .section-lead{font-size:1.03rem;color:var(--muted);margin:0;max-width:620px}
-
-    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .service{position:relative;overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between}
-    .service::after{content:"";position:absolute;inset:auto -20px -45px auto;width:150px;height:150px;border-radius:50%;background:var(--sand);opacity:.55}
-    .service-mark{width:48px;height:48px;border-radius:14px;background:var(--ink);color:#fff;display:grid;place-items:center;position:relative;z-index:1}
-    .service-mark svg{width:25px;height:25px}
-    .service h3{font-size:1.48rem;margin:30px 0 11px;position:relative;z-index:1}
-    .service p{color:var(--muted);font-size:.92rem;margin:0;max-width:310px;position:relative;z-index:1}
-    .service-foot{margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;z-index:1}
-    .service-foot span{font-size:.7rem;text-transform:uppercase;letter-spacing:.11em;font-weight:900;color:var(--terracotta)}
-    .arrow{width:34px;height:34px;border:1px solid var(--line);border-radius:10px;display:grid;place-items:center}
-
-    .approach{background:var(--ink);color:#fff}
-    .approach-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:74px;align-items:start}
-    .approach .kicker{color:#e8b39f}
-    .approach h2{max-width:640px}
-    .approach-copy{color:#ced6d5;font-size:1.05rem;max-width:620px}
-    .approach-copy p{margin:0 0 20px}
-    .detail-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}
-    .detail{border:1px solid rgba(255,255,255,.13);border-radius:15px;padding:16px 17px;background:rgba(255,255,255,.045)}
-    .detail strong{display:block;color:#fff;font-size:.88rem}
-    .detail span{font-size:.78rem;color:#9da8a8}
-    .process-stack{display:grid;gap:14px}
-    .process-row{display:grid;grid-template-columns:74px 1fr auto;align-items:center;gap:18px;padding:20px;border:1px solid rgba(255,255,255,.13);border-radius:18px;background:rgba(255,255,255,.04)}
-    .process-num{font-family:Georgia,serif;font-size:1.7rem;color:#efbaa6}
-    .process-row h3{font-size:1.2rem;margin:0 0 4px;color:#fff}
-    .process-row p{margin:0;color:#aeb9b8;font-size:.84rem}
-    .process-arrow{font-size:1.15rem;color:#efbaa6}
-
-    .info-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:30px;align-items:stretch}
-    .fact-panel{background:var(--sand);border-radius:var(--radius);padding:36px;border:1px solid #dbcdb9}
-    .fact-panel h3{font-size:1.7rem;margin:9px 0 16px}
-    .fact-panel p{color:#526064;margin:0 0 22px}
-    .fact-tags{display:flex;gap:9px;flex-wrap:wrap}
-    .fact-tag{border:1px solid rgba(23,40,43,.16);border-radius:999px;padding:9px 11px;background:rgba(255,255,255,.42);font-size:.78rem;font-weight:800}
-    .location-panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:36px;box-shadow:0 10px 30px rgba(23,40,43,.04)}
-    .location-panel h3{font-size:1.6rem;margin:9px 0 22px}
-    .location-line{display:flex;gap:13px;padding:16px 0;border-top:1px solid var(--line)}
-    .location-line:first-of-type{border-top:0;padding-top:0}
-    .location-icon{width:36px;height:36px;border-radius:10px;background:#efe5d5;display:grid;place-items:center;flex:0 0 36px;color:var(--terracotta)}
-    .location-line strong{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.09em}
-    .location-line span{display:block;color:var(--muted);font-size:.88rem;margin-top:3px}
-
-    .faq-wrap{max-width:900px;margin:0 auto}
-    .faq{border-top:1px solid var(--line)}
-    .faq-item{border-bottom:1px solid var(--line)}
-    .faq-button{width:100%;border:0;background:none;text-align:left;padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:25px;color:var(--ink);cursor:pointer;font:800 1.02rem Georgia,serif}
-    .faq-button span{width:30px;height:30px;border:1px solid var(--line);border-radius:9px;display:grid;place-items:center;font:600 1.2rem Inter,system-ui,sans-serif;color:var(--terracotta);flex:0 0 30px}
-    .faq-answer{display:none;color:var(--muted);padding:0 55px 20px 0;font-size:.92rem}
-    .faq-item.open .faq-answer{display:block}
-
-    .contact{background:var(--paper)}
-    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:start}
-    .contact-copy p{color:var(--muted);font-size:1.02rem;max-width:500px}
-    .contact-callout{margin-top:30px;padding:20px;background:var(--sand);border:1px solid #dbcdb9;border-radius:18px;max-width:420px}
-    .contact-callout strong{display:block;font-family:Georgia,serif;font-size:1.2rem;margin-bottom:3px}
-    .contact-callout a{color:var(--terracotta);font-weight:900}
-    form{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
-    .row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-    .field{margin-bottom:15px}
-    label{display:block;font-size:.69rem;text-transform:uppercase;letter-spacing:.1em;font-weight:900;color:#5b686c;margin-bottom:7px}
-    input,textarea,select{width:100%;border:1px solid #cbc0b0;background:#fffdf9;color:var(--ink);border-radius:11px;padding:12px 13px;outline:none}
-    input:focus,textarea:focus,select:focus{border-color:var(--terracotta);box-shadow:0 0 0 3px rgba(198,95,58,.1)}
-    textarea{min-height:138px;resize:vertical}
-    .form-help{background:#f0e5d3;border-left:3px solid var(--terracotta);padding:11px 13px;border-radius:0 10px 10px 0;color:#5d6b6d;font-size:.83rem;margin:5px 0 13px}
-    .form-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:18px}
-    .form-foot small{color:var(--muted);font-size:.75rem}
-    .status{min-height:22px;margin-top:10px;font-size:.85rem}
-    .status.success{color:#2e6c4e;font-weight:800}.status.error{color:#a7472a;font-weight:800}
-
-    .footer{background:#101f22;color:#aeb9b8;padding:33px 0}
-    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .footer-brand{font:700 1.08rem Georgia,serif;color:#fff}
-    .footer small{font-size:.75rem}
-
-    .fade{opacity:0;transform:translateY(12px);transition:opacity .65s ease,transform .65s ease}
-    .fade.show{opacity:1;transform:none}
-
-    @media(max-width:900px){
-      .nav-links{display:none;position:absolute;top:78px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--line);padding:10px 20px 18px;flex-direction:column;align-items:stretch;gap:2px;box-shadow:0 16px 30px rgba(23,40,43,.09)}
-      .nav-links.open{display:flex}.nav-links a{padding:12px 6px}.nav-call{text-align:center;justify-content:center;margin-top:4px}.menu{display:block}
-      .hero-inner,.approach-grid,.info-grid,.contact-grid{grid-template-columns:1fr;gap:42px}
-      .hero-inner{padding:60px 0 72px}.hero-art{min-height:420px}.art-card{max-width:540px}
-      .section{padding:78px 0}.section-head{grid-template-columns:1fr;gap:18px}.service-grid{grid-template-columns:1fr 1fr}
-      .detail-list{grid-template-columns:1fr 1fr}.process-row{grid-template-columns:64px 1fr}.process-arrow{display:none}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:var(--cream);
+      font-family:"DM Sans",system-ui,sans-serif;
+      line-height:1.6;
     }
-    @media(max-width:620px){
-      .wrap{width:min(var(--max),calc(100% - 28px))}.utility-inner{min-height:38px}.utility-left{font-size:.74rem}.utility-left .hide-small{display:none}
-      .nav-inner{height:70px}.brand-mark{width:43px;height:43px;flex-basis:43px}.brand-name{font-size:.92rem}.brand-loc{font-size:.62rem}
-      .hero-inner{padding:50px 0 60px}.hero-actions .btn{width:100%}.hero-facts{gap:17px 22px}
-      .hero-art{min-height:355px}.art-card{padding:20px;border-radius:27px}.art-scene{inset:69px 18px 18px;border-radius:20px}.art-sticker{right:16px;bottom:16px}
-      h1{font-size:clamp(2.9rem,14vw,4rem)}h2{font-size:clamp(2.3rem,11vw,3.4rem)}
-      .band-inner{align-items:flex-start;flex-direction:column}.band .btn{width:100%}
-      .service-grid{grid-template-columns:1fr}.service{min-height:240px}
-      .detail-list{grid-template-columns:1fr}.process-row{grid-template-columns:54px 1fr;padding:16px}.fact-panel,.location-panel{padding:26px}
-      .row{grid-template-columns:1fr}form{padding:24px}.form-foot{align-items:stretch;flex-direction:column}.form-foot .btn{width:100%}
-      .footer-inner{align-items:flex-start;flex-direction:column}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1120px, calc(100% - 40px));margin:0 auto}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:9px;
+      font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
+      color:var(--green);
     }
-  
-    .coupon-section{padding:78px 0;background:var(--paper);border-bottom:1px solid var(--line)}
-    .coupon-card{display:grid;grid-template-columns:.72fr 1.28fr;gap:34px;align-items:center;background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 14px 38px rgba(23,40,43,.07)}
-    .coupon-copy .kicker{margin-bottom:8px}
-    .coupon-copy h2{font-size:clamp(2rem,4vw,3.25rem);margin:8px 0 12px}
-    .coupon-copy p{color:var(--muted);margin:0;max-width:430px}
-    .coupon-image-wrap{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;overflow:hidden}
-    .coupon-image{width:100%;height:auto;border-radius:12px}
-    .coupon-empty{color:var(--muted);font-size:.9rem;padding:30px;text-align:center}
+    .eyebrow::before{content:"";width:24px;height:1px;background:currentColor}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:"Libre Baskerville",Georgia,serif;line-height:1.12}
+    h1{font-size:clamp(3.1rem,7vw,6.3rem);letter-spacing:-.055em;margin-bottom:25px}
+    h2{font-size:clamp(2.15rem,4.5vw,4rem);letter-spacing:-.04em}
+    h3{font-size:1.25rem}
+    .nav{
+      position:sticky;top:0;z-index:20;
+      background:rgba(251,248,241,.90);backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(217,208,193,.8);
+    }
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:-.02em}
+    .brand-mark{width:46px;height:46px;object-fit:contain;flex:0 0 46px}
+    .brand span{font-size:.98rem}
+    .nav-links{display:flex;gap:28px;align-items:center;font-size:.92rem}
+    .nav-links a{color:#45514d}
+    .nav-links a:hover{color:var(--green)}
+    .nav-cta{
+      padding:10px 17px;border:1px solid var(--green);border-radius:999px;
+      color:var(--green)!important;font-weight:700;
+    }
+    .hero{
+      position:relative;overflow:hidden;
+      padding:86px 0 95px;
+      background:
+        radial-gradient(circle at 88% 20%, rgba(200,161,90,.20), transparent 25%),
+        radial-gradient(circle at 8% 85%, rgba(126,150,150,.14), transparent 24%),
+        var(--paper);
+      border-bottom:1px solid var(--line);
+    }
+    .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:70px;align-items:center}
+    .hero-copy p{max-width:680px;font-size:1.14rem;color:#56625e}
+    .accent{color:var(--rust)}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:34px}
+    .button{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      border-radius:999px;padding:14px 21px;font-weight:700;
+      transition:.2s ease;cursor:pointer;border:0;font:inherit;
+    }
+    .button-primary{background:var(--green);color:#fff}
+    .button-primary:hover{background:var(--green-2);transform:translateY(-2px)}
+    .button-secondary{border:1px solid var(--line);background:rgba(255,255,255,.45);color:var(--ink)}
+    .button-secondary:hover{border-color:#a9a093;transform:translateY(-2px)}
+    .hero-note{display:flex;gap:25px;margin-top:32px;flex-wrap:wrap}
+    .hero-note strong{display:block;font-size:1.05rem}
+    .hero-note span{font-size:.83rem;color:var(--muted)}
+    .logo-card{
+      position:relative;background:#162521;border-radius:30px;padding:35px;
+      box-shadow:var(--shadow);transform:rotate(1deg);
+      overflow:hidden;
+    }
+    .logo-card::before{
+      content:"";position:absolute;inset:0;
+      background:radial-gradient(circle at 75% 15%,rgba(200,161,90,.23),transparent 32%),
+                 radial-gradient(circle at 15% 85%,rgba(126,150,150,.18),transparent 30%);
+      pointer-events:none;
+    }
+    .logo-lockup{position:relative;z-index:1;padding:8px 0 24px;text-align:center}
+    .logo-lockup img{width:min(100%,470px);margin:auto;filter:drop-shadow(0 12px 24px rgba(0,0,0,.18))}
+    .hero-wordmark{margin-top:-2px;color:#f7f2e8}
+    .hero-wordmark strong{display:block;font-family:"Libre Baskerville",Georgia,serif;font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:.08em;line-height:.95}
+    .hero-wordmark span{display:block;margin-top:12px;font-size:.79rem;letter-spacing:.28em;color:#d9cdbd}
+    .logo-caption{
+      position:absolute;left:28px;bottom:20px;color:rgba(255,255,255,.62);
+      font-size:.7rem;letter-spacing:.13em;text-transform:uppercase
+    }
+    .section{padding:110px 0}
+    .section-tight{padding:85px 0}
+    .intro-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:80px;align-items:start}
+    .intro-copy{font-size:1.16rem;color:#4e5a55;max-width:690px}
+    .intro-copy p{margin-bottom:20px}
+    .pullquote{
+      margin:35px 0 0;padding:25px 0 0;border-top:1px solid var(--line);
+      font-family:"Libre Baskerville",Georgia,serif;font-size:1.5rem;line-height:1.45;color:var(--green)
+    }
+    .process{background:var(--green);color:#f7f2e8}
+    .process .eyebrow{color:#e3c788}
+    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+    .process-card{
+      border:1px solid rgba(255,255,255,.17);border-radius:var(--radius);padding:30px;
+      background:rgba(255,255,255,.045);
+    }
+    .process-number{font-family:"Libre Baskerville",serif;color:#d9b86c;font-size:1rem}
+    .process-card h3{margin:22px 0 10px;color:#fff}
+    .process-card p{color:rgba(247,242,232,.72);margin:0}
+    .offer{background:#e8e0d1}
+    .offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch}
+    .price-card,.included-card{
+      background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:38px;
+      box-shadow:0 10px 35px rgba(28,40,36,.05)
+    }
+    .price{
+      display:flex;align-items:baseline;gap:10px;margin:18px 0 20px
+    }
+    .price strong{font-family:"Libre Baskerville",serif;font-size:4.1rem;letter-spacing:-.06em;color:var(--green)}
+    .price span{color:var(--muted)}
+    .price-card p{color:#58635e}
+    .checks{list-style:none;padding:0;margin:28px 0 0}
+    .checks li{padding:10px 0;border-top:1px solid var(--line);display:flex;gap:11px}
+    .checks li::before{content:"✓";font-weight:700;color:var(--rust)}
+    .note{
+      margin-top:20px;font-size:.88rem;color:var(--muted);padding:15px 17px;
+      border-left:3px solid var(--gold);background:#f1ebdf;border-radius:0 12px 12px 0
+    }
+    .included-card h3{margin-bottom:25px}
+    .included-row{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
+    .included-row strong{font-size:.95rem}
+    .included-row span{font-size:.9rem;color:var(--muted);text-align:right;max-width:55%}
+    .hosting{
+      padding:100px 0;background:var(--cream);
+    }
+    .hosting-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .hosting-copy p{color:#56615d;font-size:1.08rem}
+    .hosting-box{
+      background:var(--paper);border:1px solid var(--line);padding:34px;border-radius:var(--radius)
+    }
+    .hosting-box h3{margin-bottom:10px}
+    .hosting-box p{font-size:.96rem;color:#5c6762}
+    .mini-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+    .mini-point{padding:15px;background:#fff;border:1px solid var(--line);border-radius:14px;font-size:.88rem}
+    .story{background:var(--paper)}
+    .story-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:75px;align-items:center}
+    .portrait-frame{
+      margin:0;min-height:470px;border-radius:28px;overflow:hidden;
+      border:1px solid var(--line);background:#ddd6ca;box-shadow:var(--shadow);
+    }
+    .portrait-frame img{width:100%;height:100%;min-height:470px;object-fit:cover;object-position:center 27%;}
 
+    .story-copy p{color:#56615d;font-size:1.08rem}
+    .signature{font-family:"Libre Baskerville",serif;color:var(--green);font-size:1.05rem;margin-top:25px}
+    .retainer{background:var(--green);color:#f7f2e8}
+    .retainer-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .retainer p{color:rgba(247,242,232,.74);font-size:1.05rem}
+    .retainer-list{list-style:none;padding:0;margin:0}
+    .retainer-list li{padding:17px 0;border-bottom:1px solid rgba(255,255,255,.15);display:flex;gap:14px}
+    .retainer-list li::before{content:"+";color:#d9b86c;font-weight:700}
+    .contact{padding:110px 0}
+    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:75px}
+    .contact-copy p{color:#5b6762;font-size:1.08rem}
+    form{background:var(--paper);border:1px solid var(--line);padding:35px;border-radius:var(--radius)}
+    .field{margin-bottom:17px}
+    label{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:7px;color:#4e5b56}
+    input,textarea,select{
+      width:100%;border:1px solid #cec4b4;background:#fffdf8;border-radius:12px;
+      padding:13px 14px;font:inherit;color:var(--ink);outline:none
+    }
+    input:focus,textarea:focus,select:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(24,53,46,.08)}
+    textarea{min-height:130px;resize:vertical}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+     .recipient-box{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      margin-top:18px;padding:13px 15px;border:1px solid var(--line);
+      background:rgba(255,255,255,.58);border-radius:12px;color:#59645f;
+    }
+    .recipient-label{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#6c756f}
+    .recipient-email{display:flex;align-items:center;gap:8px;color:var(--green);font-size:.9rem;font-weight:700;white-space:nowrap}
+    .recipient-email svg{width:15px;height:15px;flex:0 0 15px}
+    .form-status{margin-top:14px;font-size:.9rem;line-height:1.45;min-height:1.3em;color:var(--muted)}
+    .form-status.success{color:var(--green);font-weight:600}
+    .form-status.error{color:#985036;font-weight:600}
+    .form-foot{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:20px}
+    .form-foot small{color:var(--muted)}
+    .footer{background:#14211e;color:rgba(255,255,255,.65);padding:35px 0}
+    .footer-inner{display:flex;justify-content:space-between;gap:30px;align-items:center}
+    .footer-brand{color:#fff;font-family:"Libre Baskerville",serif}
+    .footer small{font-size:.78rem}
+    .fade{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+    .fade.visible{opacity:1;transform:none}
+    .menu-button{display:none;background:none;border:0;font-size:1.4rem;line-height:1;cursor:pointer;color:var(--green)}
+    body{overflow-x:hidden}
+
+    @media(max-width:850px){
+      .container{width:min(100% - 32px,1120px)}
+      .nav-inner{height:70px}
+      .nav-links{
+        display:none;
+        position:absolute;
+        top:70px;left:0;right:0;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:8px 16px 16px;
+        background:rgba(251,248,241,.98);
+        border-bottom:1px solid var(--line);
+        box-shadow:0 16px 30px rgba(28,40,36,.08);
+      }
+      .nav-links.mobile-open{display:flex}
+      .nav-links a{padding:12px 8px}
+      .nav-links .nav-cta{margin:6px 0 0;text-align:center}
+      .menu-button{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%}
+      .hero-grid,.intro-grid,.offer-grid,.hosting-grid,.story-grid,.retainer-grid,.contact-grid{grid-template-columns:1fr;gap:42px}
+      .hero{padding:56px 0 72px}
+      .hero-copy p{font-size:1.05rem}
+      .hero-actions{margin-top:28px}
+      .logo-card{max-width:620px;width:100%;margin:auto;padding:28px 22px 48px;transform:none;border-radius:24px}
+      .hero-wordmark strong{font-size:2.05rem}
+      .hero-wordmark span{letter-spacing:.18em;font-size:.66rem}
+      .logo-caption{left:22px;bottom:16px;font-size:.64rem}
+      .process-grid{grid-template-columns:1fr}
+      .portrait-frame{min-height:390px}
+      .portrait-frame img{min-height:390px;object-position:center 25%}
+      .section,.contact{padding:76px 0}
+      .hosting{padding:78px 0}
+      .footer-inner{flex-direction:column;align-items:flex-start}
+      .included-row{flex-direction:column;gap:7px}
+      .included-row span{max-width:none;text-align:left}
+
+    }
+
+    @media(max-width:540px){
+      .container{width:min(100% - 28px,1120px)}
+      .brand{gap:8px}
+      .brand-mark{width:40px;height:40px;flex-basis:40px}
+      .brand span{font-size:.88rem}
+      h1{font-size:clamp(2.55rem,12vw,3.05rem);letter-spacing:-.05em}
+      h2{font-size:clamp(2rem,10vw,3rem)}
+      .hero-note{gap:18px 22px}
+      .hero-actions .button{width:100%}
+      .price-card,.included-card{padding:28px 24px}
+      .price strong{font-size:3.25rem}
+      .form-row{grid-template-columns:1fr}
+      form{padding:24px}
+      .form-foot{align-items:stretch;flex-direction:column}
+      .form-foot .button{width:100%}
+      .mini-points{grid-template-columns:1fr}
+      .story-grid,.contact-grid{gap:34px}
+      .portrait-frame,.portrait-frame img{min-height:340px}
+      .retainer-list li{padding:15px 0}
+    }
   </style>
 </head>
 <body>
-  <div class="utility">
-    <div class="wrap utility-inner">
-      <div class="utility-left"><span class="utility-dot"></span><span>Preferred Carpet Cleaning</span><span class="hide-small">· Cottage Grove, Wisconsin</span></div>
-      <a href="tel:+16088391565">(608) 839-1565</a>
-    </div>
-  </div>
-
   <header class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="#top" aria-label="Preferred Carpet Cleaning home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10h9l3.5 9H29"/><path d="M8 26h17"/><path d="M10 26c0-4.5 2.8-7 7-7"/><path d="M25 18v8"/><circle cx="28" cy="27" r="2.3"/><path d="M7 10v-2"/></svg>
-        </span>
-        <span class="brand-copy"><span class="brand-name">Preferred Carpet Cleaning</span><span class="brand-loc">Cottage Grove, Wisconsin</span></span>
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Madison Design Projects home">
+        <img class="brand-mark" src="" data-mdp-image="logo-mark" alt="" />
+        <span>Madison Design Projects</span>
       </a>
-      <nav class="nav-links" id="siteNav" aria-label="Primary navigation">
-        <a href="#services">Services</a>
-        <a href="#approach">How it works</a>
-        <a href="#questions">Questions</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-call" href="tel:+16088391565">Call now</a>
+      <nav class="nav-links" id="mobileNav" aria-label="Primary">
+        <a href="#approach">Approach</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Let's talk</a>
       </nav>
-      <button class="menu" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
+      <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" type="button" onclick="toggleMobileNav(this)">☰</button>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="wrap hero-inner">
+      <div class="container hero-grid">
         <div class="hero-copy fade">
-          <span class="kicker">Carpet & upholstery cleaning</span>
-          <h1>A cleaner room starts with the right clean.</h1>
-          <p>Preferred Carpet Cleaning is based in Cottage Grove, Wisconsin. When the carpet needs attention or upholstered furniture needs a deeper clean, the first step is simply figuring out what the job calls for.</p>
+          <span class="eyebrow">Websites for local businesses</span>
+          <h1>A good website should <span class="accent">do something.</span></h1>
+          <p>I build straightforward, thoughtful websites that help local businesses explain what they do, answer the questions customers have, and make it easier for the right people to get in touch.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="tel:+16088391565">Call (608) 839-1565 <span aria-hidden="true">→</span></a>
-            <a class="btn btn-secondary" href="#contact">Send a message</a>
+            <a class="button button-primary" href="#contact">Talk about your site →</a>
+            <a class="button button-secondary" href="#pricing">See the $400 plan</a>
           </div>
-          <div class="hero-facts">
-            <div class="fact"><strong>Cottage Grove</strong><span>Local location</span></div>
-            <div class="fact"><strong>Carpet</strong><span>Cleaning service</span></div>
-            <div class="fact"><strong>Upholstery</strong><span>Ask about fabric care</span></div>
+          <div class="hero-note">
+            <div><strong>$400 flat</strong><span>for the website build</span></div>
+            <div><strong>3–5 days</strong><span>typical launch window</span></div>
+            <div><strong>30–60 min</strong><span>to get started</span></div>
           </div>
         </div>
-
-        <div class="hero-art fade" aria-label="Illustrated carpet cleaning scene">
-          <div class="art-card">
-            <div class="art-top"><span class="art-label">Preferred Carpet Cleaning</span><span class="art-year">Cottage Grove</span></div>
-            <div class="art-scene">
-              <div class="vessel"></div>
-              <div class="floor-line"></div>
-              <div class="carpet"></div>
-              <div class="wand"></div>
-              <div class="wand-handle"></div>
-              <div class="clean-glow"></div>
-              <div class="art-sticker"><strong>Clean starts here.</strong>Call to talk it through.</div>
+        <div class="logo-card fade">
+          <div class="logo-lockup">
+            <img src="" data-mdp-image="logo-wordmark" alt="Madison skyline illustration" />
+            <div class="hero-wordmark">
+              <strong>MADISON</strong>
+              <span>DESIGN PROJECTS</span>
             </div>
           </div>
+          <div class="logo-caption">Built in Madison, Wisconsin</div>
         </div>
       </div>
     </section>
 
-    <div class="band"><div class="wrap band-inner"><div><strong>Have a room, rug, sofa, or stubborn spot in mind?</strong><br><span>Give Preferred Carpet Cleaning a call and describe the job.</span></div><a class="btn" href="tel:+16088391565">(608) 839-1565</a></div></div>
-
-
-    <section class="coupon-section" id="coupon">
-      <div class="wrap">
-        <div class="coupon-card fade">
-          <div class="coupon-copy">
-            <span class="kicker">Current offer</span>
-            <h2>Save on your next cleaning.</h2>
-            <p>Check the current Preferred Carpet Cleaning coupon before you call. This offer is updated from our current promotions.</p>
-          </div>
-          <div class="coupon-image-wrap">
-            <div id="couponContent" class="coupon-empty">Loading current coupon…</div>
-          </div>
+    <section class="section" id="approach">
+      <div class="container intro-grid">
+        <div class="fade">
+          <span class="eyebrow">The idea</span>
+          <h2>Your website should fit your business.</h2>
+        </div>
+        <div class="intro-copy fade">
+          <p>A hardware store might need to tell someone which kinds of lumber it carries. A fencing company might need to show the materials and styles it installs. A contractor might simply need a place where a potential customer can see the work, understand the service, and ask for a quote.</p>
+          <p>That's the kind of problem I like solving. I'm not trying to put every business into the same kind of website, or make something simple just for the sake of keeping it simple. The goal is to build a site that actually fits the business behind it — what it offers, how its customers find it, and what those customers need to know. And I do that for a $400 flat price, far below what many agencies and professional web designers charge for comparable work.</p>
+          <div class="pullquote">“Think of it less like buying software, and more like commissioning a piece of work made for your business.”</div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="services">
-      <div class="wrap">
-        <div class="section-head fade"><div><span class="kicker">Services</span><h2>Start with what needs attention.</h2></div><p class="section-lead">Carpet and upholstery cleaning for homes, furniture, and the everyday messes that come with both. Start with what needs attention and we can talk through the job.</p></div>
-        <div class="service-grid">
-          <article class="service fade">
-            <div>
-              <span class="service-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18h14"/><path d="M8 18c0-3.6 1.8-6 5.5-6H16"/><path d="M9 8h4l2 4"/><path d="M6 8h3"/></svg></span>
-              <h3>Carpet cleaning</h3><p>For rooms and carpeted areas that need more than a regular vacuum, start by describing the space and what is going on with it.</p>
-            </div>
-            <div class="service-foot"><span>Ask about carpet</span><span class="arrow">→</span></div>
+    <section class="section process">
+      <div class="container">
+        <span class="eyebrow">How it works</span>
+        <h2 style="max-width:700px;margin-top:18px">Simple from your side.</h2>
+        <div class="process-grid">
+          <article class="process-card fade">
+            <span class="process-number">01</span>
+            <h3>We talk.</h3>
+            <p>Give me 30 minutes to an hour. I'll learn what you do, what customers ask, what you want the site to accomplish, and what you like.</p>
           </article>
-          <article class="service fade">
-            <div>
-              <span class="service-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="7" rx="2"/><path d="M6 17v2M18 17v2M7 10V8c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v2"/></svg></span>
-              <h3>Upholstery cleaning</h3><p>Furniture and fabric collect everyday wear. Tell them what the piece is made of and what you want cleaned before assuming what it needs.</p>
-            </div>
-            <div class="service-foot"><span>Ask about upholstery</span><span class="arrow">→</span></div>
+          <article class="process-card fade">
+            <span class="process-number">02</span>
+            <h3>I make it.</h3>
+            <p>I take that conversation and turn it into a site. In many cases, I'll start with a business I think would be interesting to build for and show you the idea before you buy.</p>
           </article>
-          <article class="service fade">
-            <div>
-              <span class="service-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6h14v12H5z"/><path d="M8 9h8M8 13h5"/><circle cx="17" cy="16" r="3" fill="currentColor" stroke="none"/></svg></span>
-              <h3>Questions first</h3><p>Stain, rug, fabric, or something unusual? A quick conversation can help determine what kind of care makes sense.</p>
-            </div>
-            <div class="service-foot"><span>Describe the job</span><span class="arrow">→</span></div>
+          <article class="process-card fade">
+            <span class="process-number">03</span>
+            <h3>You make the call.</h3>
+            <p>Look it over, tell me what you want changed, and we'll get the final version ready. If you like it, it becomes yours. If it's not for you, that's okay too.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section approach" id="approach">
-      <div class="wrap approach-grid">
-        <div class="fade"><span class="kicker">How it works</span><h2>Less guessing. More talking about the actual job.</h2><div class="approach-copy"><p>Good cleaning starts with useful details. The more clearly you can describe the space, the material, and the problem, the easier it is to have the right conversation before anything gets scheduled.</p><p>You do not need to know the technical answer. Just explain what you are looking at.</p></div><div class="detail-list"><div class="detail"><strong>Rooms or pieces</strong><span>How much needs attention?</span></div><div class="detail"><strong>Stains</strong><span>What caused them, if known?</span></div><div class="detail"><strong>Material</strong><span>Carpet, fabric, rug, or other.</span></div><div class="detail"><strong>Past attempts</strong><span>Anything already tried?</span></div></div></div>
-        <div class="process-stack fade">
-          <div class="process-row"><div class="process-num">01</div><div><h3>Reach out.</h3><p>Call or send the form with the basic details.</p></div><div class="process-arrow">↗</div></div>
-          <div class="process-row"><div class="process-num">02</div><div><h3>Describe what you need.</h3><p>Rooms, furniture, stains, material, and location.</p></div><div class="process-arrow">↗</div></div>
-          <div class="process-row"><div class="process-num">03</div><div><h3>Ask your questions.</h3><p>Talk through the job and what makes sense.</p></div><div class="process-arrow">↗</div></div>
-          <div class="process-row"><div class="process-num">04</div><div><h3>Schedule the work.</h3><p>Once the details are clear, set up a time.</p></div><div class="process-arrow">↗</div></div>
+    <section class="section offer" id="pricing">
+      <div class="container">
+        <span class="eyebrow">The offer</span>
+        <h2 style="max-width:750px;margin-top:18px">One clear price. No mystery package.</h2>
+        <div class="offer-grid" style="margin-top:48px">
+          <div class="price-card fade">
+            <span class="eyebrow">Website build</span>
+            <div class="price"><strong>$400</strong><span>flat</span></div>
+            <p>A professional, responsive business website built around what your company actually needs — at a straightforward $400 flat price instead of turning a small site into a huge project.</p>
+            <ul class="checks">
+              <li>Custom layout and styling</li>
+              <li>Mobile-friendly design</li>
+              <li>Pages and content we agree on</li>
+              <li>Contact / inquiry functionality</li>
+              <li>Launch and final changes within reason</li>
+              <li>Help getting your domain and hosting set up</li>
+            </ul>
+            <div class="note">Third-party domain and hosting costs are separate. I'll handle the setup and look for sensible, well-reviewed options so you aren't paying me a markup just to keep your site online.</div>
+          </div>
+
+          <div class="included-card fade">
+            <h3>What happens after you say yes?</h3>
+            <div class="included-row"><strong>Domain</strong><span>Your web address, purchased through a third-party registrar at its normal cost.</span></div>
+            <div class="included-row"><strong>Hosting</strong><span>I handle the setup and help you choose an affordable, well-reviewed provider. You pay the provider directly.</span></div>
+            <div class="included-row"><strong>Turnaround</strong><span>Most projects can be ready to launch in roughly 3–5 days once I have what I need.</span></div>
+            <div class="included-row"><strong>Revisions</strong><span>We'll make the reasonable final changes needed to get the site where it should be.</span></div>
+            <div class="included-row"><strong>After launch</strong><span>Need something fixed later? You can reach out as needed, or put me on a simple retainer for ongoing help.</span></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="location">
-      <div class="wrap">
-        <div class="info-grid">
-          <div class="fact-panel fade"><span class="kicker">A better way to get started</span><h3>Tell them what you are actually dealing with.</h3><p>Instead of a long sales pitch, the useful information is usually pretty simple. A few details can make the conversation easier and save back-and-forth.</p><div class="fact-tags"><span class="fact-tag">How many rooms?</span><span class="fact-tag">What kind of stain?</span><span class="fact-tag">What material?</span><span class="fact-tag">Which city?</span><span class="fact-tag">Already tried a product?</span></div></div>
-          <div class="location-panel fade"><span class="kicker">Contact</span><h3>Preferred Carpet Cleaning</h3><div class="location-line"><span class="location-icon" aria-hidden="true">☎</span><div><strong>Phone</strong><span><a href="tel:+16088391565">(608) 839-1565</a></span></div></div><div class="location-line"><span class="location-icon" aria-hidden="true">⌂</span><div><strong>Address</strong><span>360 Progress Dr #205<br>Cottage Grove, WI 53527</span></div></div><div class="location-line"><span class="location-icon" aria-hidden="true">↗</span><div><strong>Start here</strong><span>Call to ask about availability and your specific cleaning needs.</span></div></div></div>
+    <section class="hosting">
+      <div class="container hosting-grid">
+        <div class="hosting-copy fade">
+          <span class="eyebrow">No hosting games</span>
+          <h2>I handle the technical stuff. You keep control.</h2>
+          <p>Your domain and hosting are simply the services that keep your website online. You pay those companies directly, at their normal price — they are not extra fees I add to the project.</p>
+          <p>I handle the setup and help you choose a provider that is affordable, reputable, and right for the site. Since that money does not go to me, there is no reason for me to steer you toward a more expensive option.</p>
+        </div>
+        <div class="hosting-box fade">
+          <h3>And if you don't want to think about it?</h3>
+          <p>That's fine too. I can handle the setup, keep track of the technical side, and be the person you contact when something needs attention.</p>
+          <div class="mini-points">
+            <div class="mini-point"><strong>Setup</strong><br>Domain + hosting</div>
+            <div class="mini-point"><strong>Support</strong><br>Fixes when needed</div>
+            <div class="mini-point"><strong>Retainer</strong><br>Ongoing help, if wanted</div>
+            <div class="mini-point"><strong>Transparent</strong><br>No hosting markup</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="questions">
-      <div class="wrap faq-wrap">
-        <div class="section-head fade" style="grid-template-columns:1fr 1fr;margin-bottom:30px"><div><span class="kicker">Questions</span><h2>Things people usually want to know.</h2></div><p class="section-lead">No giant FAQ library here—just the basics that help someone decide whether they should pick up the phone.</p></div>
-        <div class="faq">
-          <div class="faq-item open fade"><button class="faq-button" type="button">Do you clean residential carpet?<span>−</span></button><div class="faq-answer">Tell us how many rooms need attention, what the carpet looks like, and anything unusual about the job. Call (608) 839-1565 and we'll take it from there.</div></div>
-          <div class="faq-item fade"><button class="faq-button" type="button">What if I have a difficult stain?<span>+</span></button><div class="faq-answer">Describe what caused it, how long it has been there, and whether you have already tried a cleaning product. That gives the conversation a useful starting point.</div></div>
-          <div class="faq-item fade"><button class="faq-button" type="button">Can I ask about upholstery?<span>+</span></button><div class="faq-answer">Yes. Tell us what piece you have, what the fabric is if you know it, and what you would like cleaned.</div></div>
-          <div class="faq-item fade"><button class="faq-button" type="button">Where is Preferred Carpet Cleaning located?<span>+</span></button><div class="faq-answer">Our location is 360 Progress Dr #205, Cottage Grove, WI 53527. Call before visiting so we can make sure the details are current.</div></div>
-          <div class="faq-item fade"><button class="faq-button" type="button">What is the best way to get started?<span>+</span></button><div class="faq-answer"><a href="tel:+16088391565" style="color:var(--terracotta);font-weight:900">Call (608) 839-1565</a> and describe what needs attention. You can also use the form below to send a message.</div></div>
+    <section class="section story" id="about">
+      <div class="container story-grid">
+        <figure class="portrait-frame fade"><img src="" data-mdp-image="jacob-photo" alt="Jacob M. Moss, owner of Madison Design Projects" /></figure>
+        <div class="story-copy fade">
+          <span class="eyebrow">The person behind it</span>
+          <h2>Hi, I'm Jacob.</h2>
+          <p>I'm Jacob Moss, the owner of Madison Design Projects. I'm 26, and I've spent most of my life around technology — learning how things work, building things, and figuring out how to make them useful.</p>
+          <p>That is really what I care about with websites. I don't want to hand a business a pretty page and call it a day. I want to understand the business well enough to build something that actually helps: a place where customers can find answers, see what you offer, and know what to do next.</p>
+          <p>Madison Design Projects is my way of doing that for local businesses. I keep the process simple, the price straightforward, and the work personal. I find a business I think would be interesting to build for, I make something I believe could help, and I put it in front of the owner. From there, we make it right together.</p>
+          <p>I want to grow this into something bigger over time. But even as it grows, I want the same thing to stay true: there is a real person behind the work who cares about making something useful for your business.</p>
+          <div class="signature">— Jacob M. Moss, Owner</div>
         </div>
       </div>
     </section>
 
-    <section class="section contact" id="contact">
-      <div class="wrap contact-grid">
-        <div class="fade"><span class="kicker">Contact</span><h2>Tell them what needs cleaning.</h2><p>You do not need a polished request. A few sentences about the space, the material, and the problem is enough to start the conversation.</p><div class="contact-callout"><strong>Prefer the phone?</strong><a href="tel:+16088391565">(608) 839-1565</a><div style="color:var(--muted);font-size:.78rem;margin-top:3px">Call for current availability.</div></div></div>
-        <form class="fade" id="contactForm" action="https://formsubmit.co/ajax/madisondesignprojects@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="Preferred Carpet Cleaning website inquiry">
+    <section class="section retainer">
+      <div class="container retainer-grid">
+        <div class="fade">
+          <span class="eyebrow">After launch</span>
+          <h2 style="color:#f7f2e8">You don't have to disappear after the handoff.</h2>
+          <p>A retainer simply means you keep me available when you need me. It is completely optional — you can always contact me later without one — but some business owners like knowing there is a person they can call when the website needs attention.</p>
+        </div>
+        <ul class="retainer-list fade">
+          <li>Update your hours, services, prices, text, or photos</li>
+          <li>Fix a problem when something on the site stops working</li>
+          <li>Add a new page or section when the business changes</li>
+          <li>Have one person to call when you need website help</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy fade">
+          <span class="eyebrow">Let's make something</span>
+          <h2>Tell me about your business.</h2>
+          <p>You don't need a polished brief. Tell me what you do, what you have now, and what you wish your website did better.</p>
+          <p><strong>I'll take it from there.</strong></p>
+          <p style="margin-top:35px;color:var(--muted);font-size:.9rem">You can also email me directly at <a href="mailto:madisondesignprojects@gmail.com" style="color:var(--green);font-weight:700">madisondesignprojects@gmail.com</a></p>
+        </div>
+        <form id="contactForm" class="fade" action="https://formsubmit.co/ajax/madisondesignprojects@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New website inquiry — Madison Design Projects">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
-          <div class="row"><div class="field"><label for="name">Name</label><input id="name" name="name" required placeholder="Your name"></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" placeholder="(608) 555-1234"></div></div>
-          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@example.com"></div>
-          <div class="row"><div class="field"><label for="service">Service</label><select id="service" name="service"><option>Carpet cleaning</option><option>Upholstery cleaning</option><option>Stain question</option><option>Rug / fabric question</option><option>Commercial cleaning</option><option>Other</option></select></div><div class="field"><label for="area">City / area</label><input id="area" name="area" placeholder="Cottage Grove"></div></div>
-          <div class="field"><label for="rooms">Rooms / areas</label><input id="rooms" name="rooms" placeholder="Example: 3 rooms + stairs"></div>
-          <div class="field"><label for="message">What can we help with?</label><textarea id="message" name="message" required placeholder="Tell us what needs cleaning and anything important about stains, pets, fabric, traffic, etc."></textarea></div>
-          <div class="form-help"><strong>Helpful detail:</strong> for a stain, say what caused it and whether you have already tried a product.</div>
-          <div id="status" class="status" role="status" aria-live="polite"></div>
-          <div class="form-foot"><small>Send a message without opening another email app.</small><button class="btn btn-primary" type="submit">Send message <span aria-hidden="true">→</span></button></div>
+          <div class="form-row">
+            <div class="field"><label for="name">Name</label><input id="name" name="name" required placeholder="Your name"></div>
+            <div class="field"><label for="business">Business</label><input id="business" name="business" placeholder="Business name"></div>
+          </div>
+          <div class="field"><label for="email">Email</label><input id="email" type="email" name="email" required placeholder="you@example.com"></div>
+          <div class="field"><label for="message">What are you thinking?</label><textarea id="message" name="message" required placeholder="Tell me a little about the business, the current website, or what you'd like to build."></textarea></div>
+          <div class="recipient-box" aria-label="Message recipient">
+            <span class="recipient-label">Sending to</span>
+            <span class="recipient-email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>madisondesignprojects@gmail.com</span>
+          </div>
+          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+          <div class="form-foot">
+            <small>Your message stays right here — no email app or new page.</small>
+            <button class="button button-primary" type="submit">Send message →</button>
+          </div>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap footer-inner"><div><div class="footer-brand">Preferred Carpet Cleaning</div><small>Cottage Grove, Wisconsin</small></div><small>(608) 839-1565 · © <span id="year"></span></small></div></footer>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">Madison Design Projects</div>
+        <small>Websites for local businesses.</small>
+      </div>
+      <small>© <span id="year"></span> Madison Design Projects · Madison, Wisconsin</small>
+    </div>
+  </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // CHANGE THIS ONE VALUE to the email address you want contact requests sent to.
+    const CONTACT_EMAIL = "madisondesignprojects@gmail.com";
 
-    async function loadCurrentCoupon(){
-      const target = document.getElementById('couponContent');
-      try{
-        const response = await fetch('https://klbpbcybomnhqfojdgtz.supabase.co/rest/v1/current_coupons?service_key=eq.carpet&select=image_path&limit=1',{
-          headers:{'apikey':'sb_publishable_' + 'tlEfc8T0cm2cMdG1dN89nA_TMhWcRTs'}
-        });
-        if(!response.ok) throw new Error('coupon request failed');
-        const rows = await response.json();
-        const path = rows?.[0]?.image_path;
-        if(!path) throw new Error('no coupon');
-        const publicPath = path.split('/').map(encodeURIComponent).join('/');
-        target.className = '';
-        target.innerHTML = '<img class="coupon-image" src="https://klbpbcybomnhqfojdgtz.supabase.co/storage/v1/object/public/coupons/' + publicPath + '" alt="Current Preferred Carpet Cleaning coupon">';
-      }catch(error){
-        target.className = 'coupon-empty';
-        target.textContent = 'Current coupon unavailable right now.';
-      }
-    }
-    loadCurrentCoupon();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    function toggleMenu(button){
-      const nav = document.getElementById('siteNav');
-      const open = nav.classList.toggle('open');
-      button.setAttribute('aria-expanded', String(open));
-      button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      button.textContent = open ? '×' : '☰';
+    function toggleMobileNav(button){
+      const nav = document.getElementById("mobileNav");
+      const open = nav.classList.toggle("mobile-open");
+      button.setAttribute("aria-expanded", String(open));
+      button.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      button.textContent = open ? "×" : "☰";
     }
-    document.querySelectorAll('#siteNav a').forEach(link => link.addEventListener('click', () => {
-      const nav = document.getElementById('siteNav');
-      const menu = document.querySelector('.menu');
-      nav.classList.remove('open'); menu.setAttribute('aria-expanded','false'); menu.setAttribute('aria-label','Open menu'); menu.textContent='☰';
-    }));
-    document.querySelectorAll('.faq-button').forEach(button => button.addEventListener('click', () => {
-      const item = button.parentElement;
-      const open = item.classList.toggle('open');
-      button.querySelector('span').textContent = open ? '−' : '+';
-    }));
-    const form = document.getElementById('contactForm');
-    const status = document.getElementById('status');
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const button = form.querySelector('button[type="submit"]');
-      button.disabled = true; button.style.opacity = '.65'; button.textContent = 'Sending…';
-      status.className = 'status'; status.textContent = 'Sending your message…';
-      try{
-        const response = await fetch(form.action,{method:'POST',headers:{Accept:'application/json'},body:new FormData(form)});
-        const data = await response.json().catch(()=>({}));
-        if(!response.ok || data.success===false) throw new Error('send failed');
-        form.reset(); status.className='status success'; status.textContent='Message sent successfully.';
-      }catch(error){
-        status.className='status error'; status.textContent='Could not send right now. Please call (608) 839-1565.';
-      }finally{button.disabled=false;button.style.opacity='1';button.innerHTML='Send message <span aria-hidden="true">→</span>'}
+
+    document.querySelectorAll('#mobileNav a').forEach((link) => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('mobileNav');
+        const button = document.querySelector('.menu-button');
+        nav.classList.remove('mobile-open');
+        button.setAttribute('aria-expanded', 'false');
+        button.setAttribute('aria-label', 'Open menu');
+        button.textContent = '☰';
+      });
     });
-    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target)} }), {threshold:.08});
-    document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+
+    const contactForm = document.getElementById("contactForm");
+    const formStatus = document.getElementById("formStatus");
+
+    contactForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const data = new FormData(contactForm);
+
+      formStatus.className = "form-status";
+      formStatus.textContent = "Sending your message…";
+      submitButton.disabled = true;
+      submitButton.style.opacity = ".7";
+      submitButton.textContent = "Sending…";
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          headers: { "Accept": "application/json" },
+          body: data
+        });
+        const result = await response.json().catch(() => ({}));
+
+        if (!response.ok || result.success === false) {
+          throw new Error(result.message || "The message could not be sent.");
+        }
+
+        contactForm.reset();
+        formStatus.className = "form-status success";
+        formStatus.textContent = "Thanks — your message was sent. I'll get back to you soon.";
+      } catch (error) {
+        formStatus.className = "form-status error";
+        formStatus.textContent = "Something went wrong while sending. Please email madisondesignprojects@gmail.com directly.";
+      } finally {
+        submitButton.disabled = false;
+        submitButton.style.opacity = "1";
+        submitButton.textContent = "Send message →";
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: .12});
+
+    document.querySelectorAll(".fade").forEach(el => observer.observe(el));
   </script>
+
+<script>
+(async () => {
+  const images = document.querySelectorAll('[data-mdp-image]');
+  await Promise.all([...images].map(async (img) => {
+    const key = img.getAttribute('data-mdp-image');
+    const file = key === 'logo-mark' ? 'assets/logo-mark.b64'
+      : key === 'logo-wordmark' ? 'assets/logo-wordmark.b64'
+      : 'assets/jacob-photo.b64';
+    const mime = key === 'jacob-photo' ? 'image/webp' : 'image/webp';
+    try {
+      const r = await fetch(file, { cache: 'force-cache' });
+      if (!r.ok) throw new Error('image fetch failed');
+      const b64 = (await r.text()).trim();
+      img.src = "data:" + mime + ";base64," + b64;
+    } catch (e) {
+      // Keep the layout intact if an image cannot be loaded.
+    }
+  }));
+})();
+</script>
 </body>
 </html>
